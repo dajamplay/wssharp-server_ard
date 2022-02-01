@@ -14,14 +14,7 @@ namespace WebSocketsWindowsForm
 
         protected override void OnOpen()
         {
-            
-            _mainForm.getTextBox().Invoke(new Action(() => _mainForm.getTextBox().Text = Sessions.Count.ToString()));
-            Voicer.Say("Подключился новый пользователь!");
-
-            foreach(var id in Sessions.IDs)
-            {
-                Sessions.SendTo(ID, id);
-            }
+            new WSOnOpenController(_mainForm, this);
         }
 
         protected override void OnMessage(MessageEventArgs message)
