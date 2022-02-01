@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
@@ -14,13 +15,26 @@ namespace WebSocketsWindowsForm
 {
     public partial class MainForm : Form
     {
-        private WSServer _ws;
+
+        private readonly WSServer _ws;
+
         public MainForm()
         {
             InitializeComponent();
+
             _ws = new WSServer("ws://localhost:3333", this);
-            Voicer.Say("Программа запущена");
+
+            Voicer.Say("Кожаные Ублюдки!");
+            Voicer.Say("Кожаные Ублюдки!");
+            Voicer.Say("Кожаные Ублюдки!");
+
             LoadPortsOnComboBox();
+
+            //Process p = new Process();
+            //p.StartInfo.FileName = "cmd.exe";
+            //p.StartInfo.Arguments = "/c node server.js";
+            //p.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+            //p.Start();
         }
 
         public TextBox getTextBox()

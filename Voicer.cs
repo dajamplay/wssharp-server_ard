@@ -6,7 +6,8 @@ namespace WebSocketsWindowsForm
     {
         public static void Say(string text)
         {
-            SpeechSynthesizer voice = new SpeechSynthesizer();    
+            SpeechSynthesizer voice = new SpeechSynthesizer();
+            voice.SelectVoice("IVONA 2 Maxim OEM");
             voice.SpeakAsync(text);
         }
     }

@@ -8,9 +8,16 @@ namespace WebSocketsWindowsForm
     {
         public WSOnMessageController(MainForm mainform, MessageEventArgs message, WSHandlers socketContext)
         {
-            string[] commands = message.Data.Split(' ');
-            if (commands[0] == "youtube") Voicer.Say("youtube");
-            mainform.getTextBox().Invoke(new Action(() => mainform.getTextBox().Text = commands[1]));
+            if (message.Data.Length > 0) 
+            {
+                string[] commands = message.Data.Split(' ');
+                if (commands[0] == "youtube")
+                {
+                    Voicer.Say("youtube");
+                    mainform.getTextBox().Invoke(new Action(() => mainform.getTextBox().Text = commands[1]));
+                }
+            }
+
         }
     }
 }
