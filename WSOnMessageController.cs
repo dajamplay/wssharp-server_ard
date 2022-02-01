@@ -11,6 +11,7 @@ namespace WebSocketsWindowsForm
             string[] commands = message.Data.Split(' ');
             if (commands[0] == "youtube") Voicer.Say("youtube");
             mainform.getTextBox().Invoke(new Action(() => mainform.getTextBox().Text = commands[1]));
+            //new
         }
     }
 }
