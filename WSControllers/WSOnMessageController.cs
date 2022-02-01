@@ -17,7 +17,6 @@ namespace WebSocketsWindowsForm
                     mainform.getTextBox().Invoke(new Action(() => mainform.getTextBox().Text = commands[1]));
                 }
             }
-
         }
     }
 }
