@@ -1,14 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.IO;
 using System.IO.Ports;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WebSocketsWindowsForm
@@ -21,15 +12,10 @@ namespace WebSocketsWindowsForm
         public MainForm()
         {
             InitializeComponent();
-
             _ws = new WSServer("ws://localhost:3333", this);
-
-            Voicer.Say("Кожаные Ублюдки!");
-            Voicer.Say("Кожаные Ублюдки!");
-            Voicer.Say("Кожаные Ублюдки!");
-
+            Voicer.Init();
+            Voicer.SayByKey("start");
             LoadPortsOnComboBox();
-
             //Process p = new Process();
             //p.StartInfo.FileName = "cmd.exe";
             //p.StartInfo.Arguments = "/c node server.js";

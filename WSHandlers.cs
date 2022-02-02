@@ -17,14 +17,14 @@ namespace WebSocketsWindowsForm
             new WSOnOpenController(_mainForm, this);
         }
 
-        protected override void OnMessage(MessageEventArgs message)
+        protected override void OnMessage(MessageEventArgs messageEvent)
         {
-            new WSOnMessageController(_mainForm, message, this);        
+            new WSOnMessageController(_mainForm, messageEvent, this);        
         }
 
-        protected override void OnClose(CloseEventArgs e)
+        protected override void OnClose(CloseEventArgs closeEvent)
         {
-            _mainForm.getTextBox().Invoke(new Action(() => _mainForm.getTextBox().Text = Sessions.Count.ToString()));
+            new WSOnCloseController(_mainForm, closeEvent);
         }
     }
 }
