@@ -11,9 +11,8 @@ namespace WebSocketsWindowsForm
     {
         public WSOnOpenController(MainForm mainform, WSHandlers socketContext)
         {
-            Voicer.Say("wsOnOpen");
+            Voicer.SayFromResources("UserConnect");
             //mainform.getTextBox().Invoke(new Action(() => mainform.getTextBox().Text = socketContext.Sessions.Count.ToString()));
-            //Voicer.Say("Подключился новый пользователь!");
 
             //foreach (var id in socketContext.Sessions.IDs)
             //{

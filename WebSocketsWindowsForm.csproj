@@ -18,4 +18,19 @@
     <Folder Include="client\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Resourses\String.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>String.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resourses\String.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>String.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>

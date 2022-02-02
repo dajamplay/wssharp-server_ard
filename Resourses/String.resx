@@ -117,25 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ErrorCommand" xml:space="preserve">
-    <value>Неверная команда!</value>
-  </data>
-  <data name="ServerStart" xml:space="preserve">
-    <value>Сервер запущен!</value>
-  </data>
-  <data name="ServerStop" xml:space="preserve">
-    <value>Сервер остановлен!</value>
-  </data>
-  <data name="StartProgram" xml:space="preserve">
-    <value>Программа запущена!</value>
-  </data>
-  <data name="UserConnect" xml:space="preserve">
-    <value>Пользователь подключен!</value>
-  </data>
-  <data name="UserDisconnect" xml:space="preserve">
-    <value>Пользователь отключился!</value>
-  </data>
-  <data name="YouTubeOpen" xml:space="preserve">
-    <value>Открываю Youtube...</value>
-  </data>
 </root>

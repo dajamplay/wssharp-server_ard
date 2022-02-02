@@ -11,7 +11,7 @@ namespace WebSocketsWindowsForm
     {
         public WSOnCloseController(MainForm mainform, CloseEventArgs closeEvent)
         {
-            Voicer.Say("Кожаный отключился!");
+            Voicer.SayFromResources("UserDisconnect");
             //_mainForm.getTextBox().Invoke(new Action(() => _mainForm.getTextBox().Text = Sessions.Count.ToString()));
         }
     }

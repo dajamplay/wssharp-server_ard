@@ -5,7 +5,7 @@ namespace WebSocketsWindowsForm
 {
     public static class Voicer
     {
-        private static SpeechSynthesizer _voice = new SpeechSynthesizer();
+        private static readonly SpeechSynthesizer _voice = new SpeechSynthesizer();
 
         static Voicer()
         {
@@ -13,8 +13,14 @@ namespace WebSocketsWindowsForm
         }
 
         public static void Say(string text)
-        {       
+        {
             _voice.SpeakAsync(text);
+        }
+
+  
+        public static void SayFromResources(string key)
+        {
+            _voice.SpeakAsync(Lang.GetString(key));
         }
     }
 }

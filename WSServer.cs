@@ -28,13 +28,13 @@ namespace WebSocketsWindowsForm
             _ws = new WebSocketServer(_serverConfig);
             _ws.AddWebSocketService("/ws", () => new WSHandlers(_mainForm));
             _ws.Start();
-            Voicer.Say("Сервер запущен!");
+            Voicer.SayFromResources("ServerStart");
         }
 
         public void Stop()
         {
             _ws.Stop(1000, "Server has been stopped...");
-            Voicer.Say("Сервер остановлен!");
+            Voicer.SayFromResources("ServerStop");
         }
 
         public string GetStatus()

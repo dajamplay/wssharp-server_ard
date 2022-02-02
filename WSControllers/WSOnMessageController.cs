@@ -10,11 +10,15 @@ namespace WebSocketsWindowsForm
         {
             if (message.Data.Length > 0) 
             {
-                string[] commands = message.Data.Split(' ');
+                string[] commands = message.Data.Split('?');
                 if (commands[0] == "youtube")
                 {
-                    Voicer.Say("youtube");
+                    Voicer.SayFromResources("YouTubeOpen");
                     mainform.getTextBox().Invoke(new Action(() => mainform.getTextBox().Text = commands[1]));
+                }
+                else
+                {
+                    Voicer.SayFromResources("ErrorCommand");
                 }
             }
         }

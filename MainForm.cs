@@ -15,7 +15,7 @@ namespace WebSocketsWindowsForm
         {
             InitializeComponent();
             _ws = new WSServer("ws://localhost:3333", this);
-            Voicer.Say(Lang.GetString("StartProgram"));
+            Voicer.SayFromResources("StartProgram");
             LoadPortsOnComboBox();
             //Process p = new Process();
             //p.StartInfo.FileName = "cmd.exe";
@@ -77,7 +77,6 @@ namespace WebSocketsWindowsForm
 
         private void tick_render(object sender, EventArgs e)
         {
-
             tb_cpu_info.Text = ((int)performanceCounterCPU.NextValue()).ToString() + "%";
         }
     }
