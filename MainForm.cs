@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO.Ports;
 using System.Windows.Forms;
+using System.Threading;
+using System.Globalization;
 
 namespace WebSocketsWindowsForm
 {
@@ -13,8 +15,7 @@ namespace WebSocketsWindowsForm
         {
             InitializeComponent();
             _ws = new WSServer("ws://localhost:3333", this);
-            Voicer.Init();
-            Voicer.SayByKey("start");
+            Voicer.Say(Lang.GetString("StartProgram"));
             LoadPortsOnComboBox();
             //Process p = new Process();
             //p.StartInfo.FileName = "cmd.exe";
